@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="m-4 max-w-[980px] container mx-auto">
+      <button
+        id="logout_btn"
+        class="group p-1 relative px-6 overflow-hidden rounded-lg bg-green-500 text-lg font-semibold text-white">
+        Logout
+        <div
+          class="absolute inset-0 h-full w-full scale-0 rounded-lg transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+      </button>
+    </main>
+    <div id="form_container" class="flex items-center justify-center p-12">
+      <div class="mx-auto w-full max-w-[550px]">
+        <h1 class="text-4xl text-center font-bold">Login</h1>
+        <form id="myForm">
+          <div class="mb-5">
+            <label
+              for="email"
+              class="mb-3 block text-base font-medium text-[#07074D]">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value="demo@gmail.com"
+              placeholder="example@domain.com"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+          <div class="mb-5">
+            <label
+              for="password"
+              class="mb-3 block text-base font-medium text-[#07074D]">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+          <div>
+            <button
+              disabled
+              id="login_btn"
+              class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="bank_container" class="max-w-[980px] container mx-auto">
+      <h1 class="text-5xl p-1 m-2 text-center font-bold">
+        <span class="text-cyan-400">Money </span
+        ><span class="text-red-400">Management </span>
+        <span class="text-green-400">Bank!</span>
+      </h1>
+
+      <div class="gap-4 flex justify-between items-center">
+        <div
+          class="bg-cyan-400 w-full px-8 rounded-lg p-4 text-4xl font-semibold text-start text-white">
+          <h1>Deposit</h1>
+          <span id="deposit_display">$00</span>
+        </div>
+        <div
+          class="bg-red-400 w-full px-8 rounded-lg p-4 text-4xl font-semibold text-start text-white">
+          <h1>Withdraw</h1>
+          <span id="withdraw_display">$00</span>
+        </div>
+        <div
+          class="bg-green-400 w-full px-8 rounded-lg p-4 text-4xl font-semibold text-start text-white">
+          <h1>Balance</h1>
+          <span id="balance_display">$00</span>
+        </div>
+      </div>
+
+      <div class="flex justify-between gap-4 mt-5 items-center">
+        <div
+          class="bg-cyan-400 w-full px-8 rounded-lg p-4 text-4xl font-semibold text-start text-white">
+          <h1 class="mb-5">Please Deposit</h1>
+          <input
+            id="deposit_input"
+            class="appearance-none block w-full bg-cyan-50 text-gray-700 border border-gray-200 rounded py-3 px-4 outline-none"
+            id="grid-last-name"
+            type="text"
+            placeholder="$00" />
+          <button
+            disabled
+            id="deposit_btn"
+            class="bg-indigo-500 mt-5 hover:bg-indigo-700 text-white font-semibold py-2 px-4 text-xl rounded duration-300 transition-color">
+            Deposit
+          </button>
+        </div>
+        <div
+          class="bg-red-400 w-full px-8 rounded-lg p-4 text-4xl font-semibold text-start text-white">
+          <h1 class="mb-5">Please Withdraw</h1>
+          <input
+            id="withdraw_input"
+            class="appearance-none block w-full bg-red-50 text-gray-700 border border-gray-200 rounded py-3 px-4 outline-none"
+            id="grid-last-name"
+            type="text"
+            placeholder="$00" />
+          <button
+            disabled
+            id="withdraw_btn"
+            class="bg-indigo-500 mt-5 hover:bg-indigo-700 text-white font-semibold py-2 px-4 text-xl rounded duration-300 transition-color">
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
